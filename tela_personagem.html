@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+   
+		<div class="titulo">
+            <span class="titulo">D&D 5E - FICHA DE PERSONAGEM</span>
+        </div>
+
+        <div class="fundoCabecalho">
+            
+            
+            <div class="blocoCabecalho Esquerda">
+
+                <div class="Cabecalho">
+                    <span class="Cabecalho">JOGADOR:</span>
+                    <input type="text" class="Cabecalho"></input>
+                </div>
+                <div class="Cabecalho">
+                    <span class="Cabecalho">CAMPANHA:</span>
+                    <input type="text" class="Cabecalho"></input>
+                </div>
+                <div class="Cabecalho">
+                    <span class="Cabecalho">PERSONAGEM:</span>
+                    <input type="text" class="Cabecalho"></input>
+                </div>
+
+            </div>
+
+            <div class="blocoCabecalho Centro">
+
+                <div class="Cabecalho">
+                    <span class="Cabecalho">RAÇA:</span>
+                    <input type="text" class="Cabecalho"></input>
+                </div>
+                <div class="Cabecalho">
+                    <span class="Cabecalho">BACKGROUND:</span>
+                    <input type="text" class="Cabecalho"></input>
+                </div>
+                <div class="Cabecalho">
+                    <span class="Cabecalho">CLASSE E LEVEL:</span>
+                    <input type="text" class="Cabecalho"></input>
+                </div>
+
+            </div>
+
+            <div class="blocoCabecalho Direita">
+                    
+                <div class="Cabecalho">
+                    <span class="Cabecalho">FACÇÃO:</span>
+                    <input type="text" class="Cabecalho"></input>
+                </div>
+                <div class="Cabecalho">
+                    <span class="Cabecalho">ALINHAMENTO:</span>
+                    <input type="text" class="Cabecalho"></input>
+                </div>
+                <div class="Cabecalho">
+                    <span class="Cabecalho">EXPERIÊNCIA:</span>
+                    <input type="text" class="Cabecalho"></input>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="fundoCorpo">
+
+            <div class="blocoCorpo Esquerda">
+                
+				<form method="post">
+				<button type="button" onclick="func()">Determinar Atributos</button>
+                <div class="Corpo Atributo">
+                    <span class="Corpo Atributo">FORÇA</span>
+                    <input type="text" class="Atributo" id="atr0"></input>
+                    <input type="text" class="Atributo Modificador"></input>
+                </div>
+                <div class="Corpo Atributo">
+                    <span class="Corpo Atributo">DESTREZA</span>
+                    <input type="text" class="Atributo" id="atr1"></input>
+                    <input type="text" class="Atributo Modificador"></input>
+                </div>
+                <div class="Corpo Atributo">
+                    <span class="Corpo Atributo">CONTITUIÇÃO</span>
+                    <input type="text" class="Atributo" id="atr2"></input>
+                    <input type="text" class="Atributo Modificador"></input>
+                </div>
+                <div class="Corpo Atributo">
+                    <span class="Corpo Atributo">INTELIGÊNCIA</span>
+                    <input type="text" class="Atributo" id="atr3"></input>
+                    <input type="text" class="Atributo Modificador"></input>
+                </div>
+                <div class="Corpo Atributo">
+                    <span class="Corpo Atributo">SABEDORIA</span>
+                    <input type="text" class="Atributo" id="atr4"></input>
+                    <input type="text" class="Atributo Modificador"></input>
+                </div>
+                <div class="Corpo Atributo">
+                    <span class="Corpo Atributo">CARISMA</span>
+                    <input type="text" class="Atributo" id="atr5"></input>
+                    <input type="text" class="Atributo Modificador"></input>
+                </div>
+				</form>
+				
+				<script type="text/javascript">
+				function func(){
+						$.ajax({
+						  url: '/randomint.php',
+						  type: "POST",
+						  success: function(data) {
+								$("#atr0").val(data);
+							   }
+						
+				}
+				</script>	
+				
+                <div class="Corpo Secundarios">
+                    <input type="text" class="Secundarios"></input>
+                    <span class="Corpo Secundarios">PROFICIÊNCIA</span>
+                </div>
+                <div class="Corpo Secundarios">
+                        <input type="text" class="Secundarios"></input>
+                        <span class="Corpo Secundarios">INSPIRAÇÃO</span>
+                </div>
+                <div class="Corpo Secundarios">
+                        <input type="text" class="Secundarios"></input>
+                        <span class="Corpo Secundarios">ARMOR CLASS</span>
+                </div>
+                <div class="Corpo Secundarios">
+                        <input type="text" class="Secundarios"></input>
+                        <span class="Corpo Secundarios">INICIATIVA</span>
+                </div>
+                <div class="Corpo Secundarios">
+                        <input type="text" class="Secundarios"></input>
+                        <span class="Corpo Secundarios">PER. PASSIVA</span>
+                </div>
+                <div class="Corpo Secundarios">
+                        <input type="text" class="Secundarios"></input>
+                        <span class="Corpo Secundarios">VELOCIDADE</span>
+                </div>
+                <div class="Corpo Secundarios">
+                        <input type="text" class="Secundarios"></input>
+                        <span class="Corpo Secundarios">HIT DICE</span>
+                </div>
+
+                <div class="Corpo Caixa">
+                    <span class="Corpo Caixa">PROFICIÊNCIAS</span>
+                    <textarea type="text" class="Caixa Grande"></textarea>
+                </div>
+                <div class="Corpo Caixa">
+                    <span class="Corpo Caixa">LÍNGUAS</span>
+                    <textarea type="text" class="Caixa"></textarea>
+                </div>
+
+            </div>
+
+            <div class="blocoCorpo Centro">
+                    <div class="Corpo Valor">
+                        <input type="text" class="Valor"></input>
+                        <span class="Corpo Valor">HIT POINTS ATUAL</span>
+                    </div>
+
+                    <div class="Corpo Valor">
+                        <input type="text" class="Valor"></input>
+                        <span class="Corpo Valor">HIT POINTS TEMPORARIOS</span>
+                    </div>
+                    <div class="Corpo Valor">
+                            <input type="text" class="Valor"></input>
+                            <span class="Corpo Valor">MOEDAS DE OURO</span>
+                    </div>
+                    <div class="Corpo Caixa">
+                        <span class="Corpo Caixa">ATAQUES</span>
+                        <textarea type="text" class="Caixa Grande"></textarea>
+                    </div>
+                    <div class="Corpo Caixa">
+                        <span class="Corpo Caixa">MAGIAS</span>
+                        <textarea type="text" class="Caixa Grande"></textarea>
+                    </div>
+                    <div class="Corpo Caixa">
+                        <span class="Corpo Caixa">EQUIPAMENTOS</span>
+                        <textarea type="text" class="Caixa Grande"></textarea>
+                    </div>
+        
+            </div>
+
+            <div class="blocoCorpo Direita">
+                    <div class="Corpo Caixa">
+                        <span class="Corpo Caixa">TRAÇOS DE PERSONALIDADE</span>
+                        <textarea type="text" class="Caixa Pequena"></textarea>
+                    </div>
+                    <div class="Corpo Caixa">
+                        <span class="Corpo Caixa">IDEAIS</span>
+                        <textarea type="text" class="Caixa Pequena"></textarea>
+                    </div>
+                    <div class="Corpo Caixa">
+                        <span class="Corpo Caixa">LAÇOS</span>
+                        <textarea type="text" class="Caixa Pequena"></textarea>
+                    </div>
+                    <div class="Corpo Caixa">
+                        <span class="Corpo Caixa">DEFEITOS</span>
+                        <textarea type="text" class="Caixa Pequena"></textarea>
+                    </div>
+                    <div class="Corpo Caixa">
+                        <span class="Corpo Caixa">TALENTOS</span>
+                        <textarea type="text" class="Caixa Enorme"></textarea>
+                    </div>
+            </div>
+
+        </div>
+    
+    </body>
+</html>
